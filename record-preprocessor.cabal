@@ -50,12 +50,12 @@ executable record-preprocessor
     -- 
     record-syntax == 0.1.*,
     -- 
-    conversion,
-    conversion-text,
-    text,
+    conversion == 1.*,
+    conversion-text == 1.*,
+    text == 1.*,
     -- 
     base-prelude == 0.1.*,
-    base
+    base == 4.*
 
 
 -- Well, it's not a benchmark actually, 
