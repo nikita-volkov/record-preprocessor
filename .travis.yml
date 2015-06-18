@@ -23,20 +23,20 @@ install:
     cd dist;
     tar xzvf $pkg_name.tar.gz;
     cd $pkg_name;
-  # Install the lower bound dependencies
+  # Set up the constraints
   - 
     if [ "$lower_bound_dependencies" = "1" ];
     then
       constraint_options=(
       );
     fi;
+  # Install the "haskell-src-exts" implicit dependency
+  - cabal install happy ${constraint_options[@]}
   # Install the library dependencies
-  - cabal install --only-dependencies --reorder-goals --force-reinstalls
+  - cabal install --only-dependencies --reorder-goals --force-reinstalls --upgrade-dependencies
       ${constraint_options[@]}
       $([ "$tests" = "1" ] && echo "--enable-tests")
       $([ "$benchmarks" = "1" ] && echo "--enable-benchmarks")
-  # Install the "haskell-src-exts" implicit dependency
-  - cabal install happy
   # Build the library
   - travis_wait cabal build
   # Configure and build the remaining stuff
