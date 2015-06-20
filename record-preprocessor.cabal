@@ -1,7 +1,7 @@
 name:
   record-preprocessor
 version:
-  0.1.0.3
+  0.1.0.4
 synopsis:
   Compiler preprocessor introducing a syntactic extension for anonymous records
 description:
@@ -10,8 +10,8 @@ description:
   the Anynonymous Records syntax.
   .
   To get a look at what syntax the preprocessor enables check out
-  <http://hackage.haskell.org/package/record-preprocessor-0.1.0.3/src/demo/Main.hs the demo> and
-  <http://hackage.haskell.org/package/record-preprocessor-0.1.0.3/src/record-preprocessor.cabal its configuration in the Cabal file>,
+  <http://hackage.haskell.org/package/record-preprocessor-0.1.0.4/src/demo/Main.hs the demo> and
+  <http://hackage.haskell.org/package/record-preprocessor-0.1.0.4/src/record-preprocessor.cabal its configuration in the Cabal file>,
   which are both bundled with this package.
 category:
   Preprocessor, Compiler, Records
@@ -87,7 +87,9 @@ benchmark demo
   default-language:
     Haskell2010
   build-depends:
-    -- A required dependency on a library of record-types:
+    -- A required dependency on the preprocessor:
+    record-preprocessor == 0.1.*,
+    -- A required dependency on the library of record-types:
     record == 0.4.*,
     -- An optional dependency on the basic subset of the "lens" library:
     basic-lens == 0.0.*
