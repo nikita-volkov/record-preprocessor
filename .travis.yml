@@ -38,8 +38,8 @@ install:
       ${constraint_options[@]}
       $([ "$tests" = "1" ] && echo "--enable-tests")
       $([ "$benchmarks" = "1" ] && echo "--enable-benchmarks")
-  # Build the library
-  - travis_wait cabal build
+  # Install the library and executables
+  - travis_wait cabal install
   # Configure and build the remaining stuff
   - cabal configure 
       $([ "$tests" = "1" ] && echo "--enable-tests")
