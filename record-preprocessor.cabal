@@ -1,7 +1,7 @@
 name:
   record-preprocessor
 version:
-  0.1.1
+  0.1.1.1
 synopsis:
   Compiler preprocessor introducing a syntactic extension for anonymous records
 description:
@@ -10,8 +10,8 @@ description:
   the Anynonymous Records syntax.
   .
   To get a look at what syntax the preprocessor enables check out
-  <http://hackage.haskell.org/package/record-preprocessor-0.1.0.4/src/demo/Main.hs the demo> and
-  <http://hackage.haskell.org/package/record-preprocessor-0.1.0.4/src/record-preprocessor.cabal its configuration in the Cabal file>,
+  <http://hackage.haskell.org/package/record-preprocessor-0.1.1.1/src/demo/Main.hs the demo> and
+  <http://hackage.haskell.org/package/record-preprocessor-0.1.1.1/src/record-preprocessor.cabal its configuration in the Cabal file>,
   which are both bundled with this package.
 category:
   Preprocessor, Compiler, Records
